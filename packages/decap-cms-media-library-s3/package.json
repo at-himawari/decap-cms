@@ -1,0 +1,29 @@
+{
+    "name": "decap-cms-media-library-s3",
+    "version": "3.1.2",
+    "description": "S3 media library for Decap CMS using pre-signed URLs",
+    "main": "dist/decap-cms-media-library-s3.js",
+    "module": "dist/esm/index.js",
+    "license": "MIT",
+    "repository": "https://github.com/decaporg/decap-cms/tree/master/packages/decap-cms-media-library-s3",
+    "bugs": "https://github.com/decaporg/decap-cms/issues",
+    "keywords": [
+      "decap-cms",
+      "cms",
+      "media-library",
+      "s3",
+      "aws"
+    ],
+    "sideEffects": false,
+    "scripts": {
+      "develop": "npm run build:esm -- --watch",
+      "build": "cross-env NODE_ENV=production webpack",
+      "build:esm": "cross-env NODE_ENV=esm babel src --out-dir dist/esm --ignore \"**/__tests__\" --root-mode upward"
+    },
+    "dependencies": {},
+    "peerDependencies": {
+      "decap-cms-core": "^3.0.0",
+      "prop-types": "^15.7.2",
+      "react": "^17.0.2"
+    }
+  }
